@@ -217,7 +217,7 @@ void printHelp(int i){
 	logLevel("x -> exit");
 	switch(i){
 		case(-1):
-			logLevel("Test cases:");
+			logParent("Test cases:");
 			logChild("0 -> Speed test");
 			logLevel("1 -> Steering test");
 			logLevel("2 -> Sensor test");
