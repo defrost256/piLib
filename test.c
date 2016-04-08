@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
 {
 	if(argc == 1){
 		logError("Please enter a test number");
+		printHelp(-1);
 		return -1;
 	}
 	else if(argc == 2){
@@ -48,6 +49,7 @@ int main(int argc, char* argv[])
 	}
 	else{
 		logError("This program only requires 1 argument");
+		printHelp(-1);
 		return -1;
 	}
 	return 0;
