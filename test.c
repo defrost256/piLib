@@ -91,6 +91,10 @@ void test0(){
 			case('s'):
 				f -= 0.5;
 				break;
+			default:
+				logError("'%c' is not a valid command", c);
+				printHelp(0);
+				break;
 		}
 		setTurn(f);
 		logLevel("Steering: %f, PWM value: %d", f, (int)(f * 64 + 336));
@@ -134,6 +138,10 @@ void test1(){
 			case('s'):
 				f -= 0.5;
 				break;
+			default:
+				logError("'%c' is not a valid command", c);
+				printHelp(1);
+				break;
 		}
 		setSpeed(f);
 		logLevel("Speed: %f, PWM value: %d", f, (int)(f * 145 + 345));
@@ -173,6 +181,10 @@ void test2(){
 			case('A'):
 				v = getAcceleration();
 				logLevel("Accaleration: (%.2f, %.2f, %.2f)", v->x, v->y, v->z);
+				break;
+			default:
+				logError("'%c' is not a valid command", c);
+				printHelp(2);
 				break;
 		}
 	}
