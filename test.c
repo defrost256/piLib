@@ -187,9 +187,10 @@ void test2(){
 				logLevel("Accaleration: (%.2f, %.2f, %.2f)", v->x, v->y, v->z);
 				break;
 			case('\n'):
+			case(EOF):
 				break;
 			default:
-				logError("'%c' (%d) is not a valid command", c, c); //TODO: %d is for tests
+				logError("'%c' is not a valid command", c);
 				printHelp(2);
 				break;
 		}
