@@ -42,6 +42,7 @@ void setSpeed(float speed){
 		delay(REV_DELAY);
 	}
 	setPWMRawChannel(PWM_address, 10, i_speed, 0);
+	prevSpeed = speed;
 }
 
 void setTurn(float steer){
