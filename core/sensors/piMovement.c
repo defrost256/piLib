@@ -36,7 +36,7 @@ void initMovement(){
 }
 
 void setSpeed(float speed){
-	if(prevSpeed > 0 && speed < 0){
+	if(prevSpeed >= 0 && speed < 0){
 		setPWMRawChannel(PWM_address, 10, 345, 0);
 	}
 	setPWMRawChannel(PWM_address, 10, (int)(speed * 145 + 345), 0);
