@@ -91,6 +91,8 @@ void test0(){
 			case('s'):
 				f -= 0.5;
 				break;
+			case('\n'):
+				break;
 			default:
 				logError("'%c' is not a valid command", c);
 				printHelp(0);
@@ -138,6 +140,8 @@ void test1(){
 			case('s'):
 				f -= 0.5;
 				break;
+			case('\n'):
+				break;
 			default:
 				logError("'%c' is not a valid command", c);
 				printHelp(1);
@@ -181,6 +185,8 @@ void test2(){
 			case('A'):
 				v = getAcceleration();
 				logLevel("Accaleration: (%.2f, %.2f, %.2f)", v->x, v->y, v->z);
+				break;
+			case('\n'):
 				break;
 			default:
 				logError("'%c' is not a valid command", c);
