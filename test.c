@@ -210,7 +210,7 @@ void test3(){
 	int d;
 	while(1){
 		d = getFrontDistance();
-		if(d != -1 && d < 45){
+		if(d > -1 && d < 45){
 			setTurn(0.7);
 			setSpeed(-0.6);
 			delay(700);
