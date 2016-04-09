@@ -6,6 +6,8 @@
 #include "piLogger.h"
 #include "piDebug.h"
 
+#define SIG SIGRTMIN + 1
+
 typedef void (*timer_call)(siginfo_t* si);
 
 void createTimer(int interval, timer_call tc);

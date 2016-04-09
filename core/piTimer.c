@@ -17,13 +17,13 @@ void createTimer(int interval_ms, timer_call call)
 	sa.sa_flags = SA_SIGINFO;
 	sa.sa_sigaction = handler;
 	sigemptyset(&sa.sa_mask);
-	if(sigaction(SIGRTMIN, &sa, NULL) == -1)
+	if(sigaction(SIG, &sa, NULL) == -1)
 		logError("sigaction failed");
-	logSuccess("Sigaction created for %d", SIGRTMIN);
+	logSuccess("Sigaction created for %d", SIG);
 			
 	logChild("Blocking signal");
 	sigemptyset(&mask);
-	sigaddset(&mask, SIGRTMIN);
+	sigaddset(&mask, SIG);
 	if(sigprocmask(SIG_SETMASK, &mask, NULL) == -1)
 		logError("Blocking failed");
 	logSuccess("Signal blocked");
@@ -31,7 +31,7 @@ void createTimer(int interval_ms, timer_call call)
 	logChild("Creating system timer");
 	struct sigevent se;
 	se.sigev_notify = SIGEV_SIGNAL;
-	se.sigev_signo = SIGRTMIN;
+	se.sigev_signo = SIG;
 	se.sigev_value.sival_ptr = &timer_ID;
 	if(timer_create(CLOCK_REALTIME, &se, &timer_ID) == -1)
 		logError("System clock creation failed");
