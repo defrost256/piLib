@@ -19,7 +19,7 @@ void createTimer(int interval_ms, timer_call call)
 	sigemptyset(&sa.sa_mask);
 	if(sigaction(SIGRTMIN, &sa, NULL) == -1)
 		logError("sigaction failed");
-	logSuccess("Sigaction created");
+	logSuccess("Sigaction created for %d", SIGRTMIN);
 			
 	logChild("Blocking signal");
 	sigemptyset(&mask);

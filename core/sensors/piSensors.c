@@ -8,7 +8,7 @@ int sensorAddress[] = {0x19, 0x1E};
 
 void initSensors(){
 	
-#if !(PI_DEBUG_LEVEL | PI_DEBUG_SENSORS)
+#if !(PI_DEBUG_LEVEL & PI_DEBUG_SENSORS)
 	disableLog();
 #endif
 	
@@ -44,14 +44,14 @@ void initSensors(){
 	logSuccess("Timer started");
 	logSuccess("Sensors initialized");
 
-#if !(PI_DEBUG_LEVEL | PI_DEBUG_SENSORS)
+#if !(PI_DEBUG_LEVEL & PI_DEBUG_SENSORS)
 	enableLog();
 #endif
 }
 
 void updateSensors(siginfo_t* si){
 	
-#if !(PI_DEBUG_LEVEL | PI_DEBUG_SENSORS)
+#if !(PI_DEBUG_LEVEL & PI_DEBUG_SENSORS)
 	disableLog();
 #endif
 	
@@ -64,7 +64,7 @@ void updateSensors(siginfo_t* si){
 	onlyRaw[1] = 1;
 	currentData = writeTo;
 	
-#if !(PI_DEBUG_LEVEL | PI_DEBUG_SENSORS)
+#if !(PI_DEBUG_LEVEL & PI_DEBUG_SENSORS)
 	enableLog();
 #endif	
 }
