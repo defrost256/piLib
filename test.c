@@ -189,7 +189,7 @@ void test2(){
 			case('\n'):
 				break;
 			default:
-				logError("'%c' is not a valid command", c);
+				logError("'%c' (%d) is not a valid command", c, c);
 				printHelp(2);
 				break;
 		}
