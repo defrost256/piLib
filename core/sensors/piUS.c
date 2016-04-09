@@ -9,8 +9,13 @@ int getDistance(int trigger, int echo){
 	firstStart = start = micros();
 	while(!digitalRead(echo)){
 		start = micros();
+		if((start - firstStart) > START_T)
+			return -1;
 	}
-	while(digitalRead(echo))
+	while(digitalRead(echo)){
 		stop = micros();
+		if((stop - start) > END_T)
+			return -2;
+	}
 	return (stop - start) / 58;
 }
