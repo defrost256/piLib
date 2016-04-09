@@ -71,7 +71,7 @@ void handler(int sig, siginfo_t* si, void* uc){
 	disableLog();
 #endif
 	
-	logLevel("Timer expired");
+	logLevel("Timer expired SIG: %d", sig);
 	timerCall(si);
 	
 #if !(PI_DEBUG_LEVEL & PI_DEBUG_TIMER)
