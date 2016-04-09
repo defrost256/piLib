@@ -57,7 +57,7 @@ int main(int argc, char* argv[])
 
 void test0(){
 	float f;
-	char c;
+	int c;
 	
 	initGPIO();
 	initMovement();
@@ -106,7 +106,7 @@ void test0(){
 
 void test1(){
 	float f;
-	char c;
+	int c;
 	
 	initGPIO();
 	initMovement();
@@ -154,7 +154,7 @@ void test1(){
 }
 
 void test2(){
-	char c;
+	int c;
 	Vector3P v;
 	
 	initGPIO();
