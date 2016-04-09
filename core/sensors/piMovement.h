@@ -3,6 +3,8 @@
 
 #include "piPWM.h"
 
+#define REV_DELAY 600
+
 void initMovement();
 
 void setSpeed(float speed);
