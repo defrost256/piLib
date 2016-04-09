@@ -206,14 +206,14 @@ void test3(){
 	setTurn(0);
 	setSpeed(0);
 	delay(2000);
-	setSpeed(0.6);
+	setSpeed(0.3);
 	int d;
 	while(1){
 		d = getFrontDistance();
 		if(d > -1 && d < 45){
 			setTurn(0.7);
 			setSpeed(-0.4);
-			delay(700);
+			delay(1500);
 			setTurn(0);
 			setSpeed(0.3);
 		}
