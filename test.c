@@ -160,7 +160,7 @@ void test2(){
 	initGPIO();
 	initSensors();
 	while((c = getchar()) != 'x'){
-		switch(c){
+		/*switch(c){
 			case('h'):
 				printHelp(2);
 				break;
@@ -192,7 +192,8 @@ void test2(){
 				logError("'%c' (%d) is not a valid command", c, c); //TODO: %d is for tests
 				printHelp(2);
 				break;
-		}
+		}*/
+		putchar(c);
 	}
 }
 
