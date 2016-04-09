@@ -190,7 +190,6 @@ void test2(){
 				break;
 			default:
 				logError("'%c' (%d) is not a valid command", c, c); //TODO: %d is for tests
-				logError("'%c' (%d) is SIGRTMIN", __libc_current_sigrtmin(), __libc_current_sigrtmin()); // TODO: for TEST
 				printHelp(2);
 				break;
 		}

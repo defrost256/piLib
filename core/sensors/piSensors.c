@@ -37,7 +37,7 @@ void initSensors(){
 	logSuccess("Ultrasonic sensors initialized");
 	
 	logChild("Initializing timer");
-	createTimer(100, updateSensors);
+	createTimer(1000, updateSensors);
 	logSuccess("Timer initialized");
 	logChild("Starting timer");
 	startTimer();
