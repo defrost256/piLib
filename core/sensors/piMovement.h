@@ -3,7 +3,7 @@
 
 #include "piPWM.h"
 
-#define REV_DELAY 700
+#define REV_DELAY 1000
 
 void initMovement();
 
